@@ -1,0 +1,48 @@
+@use '../abstracts';
+
+.simple-circle {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    width: 175px;
+    height: 175px;
+    padding: abstracts.$space-xs;
+
+    text-align: center;
+
+    background: {
+        color: rgba(abstracts.$color-neutral, 0.5);
+        origin: padding-box;
+        size: 50%;
+    }
+
+    border: {
+        width: 6px;
+        style: solid;
+        color: abstracts.$color-neutral-light;
+        radius: 50%;
+    }
+
+    outline: {
+        width: 4px;
+        style: solid;
+        color: abstracts.$color-accent;
+        radius: 50%;
+    }
+
+    &__title,
+    &__subtitle {
+        color: abstracts.$color-primary;
+        font-weight: bold;
+    }
+
+    &__title {
+        font-size: abstracts.$font-size-h3;
+    }
+
+    &__subtitle {}
+}

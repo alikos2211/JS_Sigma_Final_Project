@@ -1,0 +1,11 @@
+@use '../abstracts';
+@use 'media' as *;
+
+.block {
+
+    padding: abstracts.$space-ml abstracts.$space-block-h;
+
+    @include mq('huge') {
+        padding: abstracts.$space-ml abstracts.$space-xxl;
+    }
+}

@@ -1,0 +1,127 @@
+@use '../abstracts';
+
+.product-card {
+    $bg-color: abstracts.$color-neutral-light;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: stretch;
+    gap: abstracts.$space-xxs;
+
+    cursor: pointer;
+
+    padding: abstracts.$space-s;
+
+    background: {
+        color: $bg-color;
+    }
+
+    border: {
+        width: 0;
+        radius: abstracts.$border-radius-default;
+    }
+
+    &__name,
+    &__price,
+    &__category {
+        font-weight: bold;
+        color: abstracts.$color-primary;
+    }
+
+    &__price {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: abstracts.$space-xxs;
+
+        &--discounted {
+            span:nth-child(1) {
+                display: inline-block !important;
+            }
+        }
+
+        span:nth-child(1) {
+            display: none;
+            font-size: 0.9em;
+            color: abstracts.$color-neutral;
+            text-decoration: line-through;
+        }
+
+        span:nth-child(2) {
+            color: abstracts.$color-primary;
+        }
+    }
+
+    &__info {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+
+    &__category {
+        padding: abstracts.$space-xxs;
+        color: abstracts.$color-neutral-light;
+
+        background-color: abstracts.$color-primary;
+
+        border: {
+            width: 0;
+            radius: abstracts.$border-radius-smaller;
+        }
+    }
+
+    &__image {
+        align-self: center;
+
+        background: {
+            color: $bg-color;
+            position: center;
+        }
+
+        background-blend-mode: multiply;
+
+        height: 375px;
+        width: auto;
+    }
+
+    &__divider {
+        border: {
+            width: 1px;
+            style: solid;
+            color: abstracts.$color-neutral;
+            radius: 4px;
+        }
+
+        width: 100%;
+    }
+}
+
+.price-text {
+    display: inline-block;
+
+    &--discounted {
+        span:nth-child(1) {
+            display: inline-block !important;
+        }
+    }
+
+    span:nth-child(1) {
+        display: none;
+        font-size: 0.9em;
+        color: abstracts.$color-neutral;
+        text-decoration: line-through;
+    }
+
+    span:nth-child(2) {
+        color: abstracts.$color-primary;
+    }
+}

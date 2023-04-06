@@ -1,0 +1,51 @@
+@use '../abstracts';
+
+.list-iht {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: abstracts.$space-xs;
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+        gap: abstracts.$space-xs;
+    }
+
+    &__image {
+        padding: abstracts.$space-s;
+
+        height: 100%;
+        width: auto;
+
+        border: {
+            width: 0;
+            radius: abstracts.$border-radius-small;
+        }
+
+        background: {
+            color: white;
+        }
+    }
+
+    &__text-block {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: abstracts.$space-xxs;
+    }
+
+    &__title {}
+
+    &__text {}
+}

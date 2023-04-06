@@ -1,0 +1,119 @@
+@use '../abstracts';
+@use '../base' as *;
+
+.block-who-we-are {
+    background-color: abstracts.$color-bg;
+    padding: 0 !important;
+
+    &__text {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+
+        aside {
+            width: 50%;
+            height: 900px;
+
+            @include mq('medium') {
+                width: 100%;
+            }
+
+            img {
+                width: auto;
+                height: 100%;
+
+                @include mq('medium') {
+                    width: 100%;
+                    height: auto;
+                }
+    
+            }
+        }
+
+        main {
+            position: absolute;
+            top: 10%;
+            left: 30%;
+            bottom: 10%;
+            height: 80%;
+            width: 30%;
+            min-width: 50rem;
+
+            @include mq('medium') {
+                position: absolute;
+                top: 10%;
+                left: 10%;
+                right: 10%;
+                width: 80%;
+            }
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            padding: abstracts.$space-m;
+
+            background-color: abstracts.$color-bg;
+
+            border: {
+                width: 0;
+                radius: abstracts.$border-radius-default
+            }
+        }
+
+        h2 {
+            font-size: abstracts.$font-size-h5;
+            margin-top: abstracts.$space-m;
+        }
+    }
+
+    &__categories {
+        position: relative;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: stretch;
+
+        gap: abstracts.$space-m;
+
+        padding: abstracts.$space-l 0;
+
+        background-color: abstracts.$color-accent-light;
+    }
+
+    &__category {
+        position: relative;
+        flex: 1 1 auto;
+
+        &__image {
+            z-index: -1;
+        }
+
+        &__name {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            z-index: 1;
+        }
+
+        background: {
+            color: abstracts.$color-accent;
+            repeat: no-repeat;
+            size: cover;
+        }
+
+        h3 {
+            font-size: abstracts.$font-size-h6;
+            padding: abstracts.$space-s abstracts.$space-ml;
+            background-color: abstracts.$color-bg;
+
+            border: {
+                width: 0;
+                radius: abstracts.$border-radius-small;
+            }
+        }
+    }
+}

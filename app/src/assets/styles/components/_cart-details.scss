@@ -1,0 +1,123 @@
+@use '../abstracts';
+
+.cart-details {
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    z-index: 10;
+
+    background-color: rgba(abstracts.$color-neutral, 0.5);
+    width: 100%;
+    height: 100%;
+
+    &--visible {
+        display: block !important;
+    }
+
+    &__modal {
+        position: relative;
+
+        $size: 75%;
+        cursor: auto;
+
+        background-color: abstracts.$color-bg;
+        margin: (100% - $size) / 2;
+        width: $size;
+        height: $size;
+
+        border: {
+            width: 0;
+            radius: abstracts.$border-radius-default;
+        }
+
+        box-shadow: 0px 4px 12px 0px rgba(abstracts.$color-neutral-dark, 0.2);
+        overflow: hidden;
+
+        padding: abstracts.$space-m;
+        padding-top: abstracts.$space-l;
+
+        display: flex;
+        gap: abstracts.$space-ml;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+        gap: abstracts.$space-xs;
+
+        main {
+            flex: 1 1 auto;
+            width: 100%;
+        }
+
+        aside {
+            flex: 2 1 auto;
+            width: 100%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            align-content: center;
+            justify-content: space-around;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        right: abstracts.$space-m;
+        top: abstracts.$space-m;
+
+        cursor: pointer;
+
+        $size: 48px;
+        width: $size;
+        height: $size;
+        color: abstracts.$color-neutral;
+    }
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        align-content: center;
+        justify-content: stretch;
+
+        padding: abstracts.$space-m;
+
+        gap: abstracts.$space-xs;
+
+        overflow-y: scroll;
+    }
+
+    &__form {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    &__total {
+        font-style: italic;
+        color: abstracts.$color-accent;
+    }
+    
+    input {
+        border: {
+            width: 2px;
+            color: abstracts.$color-neutral; 
+            style: solid;
+        }
+    }
+}

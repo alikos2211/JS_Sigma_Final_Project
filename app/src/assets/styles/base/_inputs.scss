@@ -1,0 +1,16 @@
+@use '../abstracts';
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=search] {
+    padding: abstracts.$space-s;
+    padding-right: abstracts.$space-ml;
+
+    font-style: italic;
+    border: {
+        width: 0;
+        radius: abstracts.$border-radius-small;
+    }
+}

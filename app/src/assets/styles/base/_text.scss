@@ -1,0 +1,22 @@
+@use '../abstracts';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+b,
+strong {
+    color: abstracts.$color-primary;
+}
+
+p,
+a {
+    color: abstracts.$color-neutral-dark;
+}
+
+.subtitle {
+    color: abstracts.$color-accent;
+}

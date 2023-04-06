@@ -1,0 +1,44 @@
+@use '../abstracts';
+@use '../base' as *;
+
+.block-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: abstracts.$space-s;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    &__container {
+        width: 100%;
+        
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: abstracts.$space-xs;
+        row-gap: abstracts.$space-m;
+
+        @include mq('medium') {
+            grid-template-columns: 1fr;
+        }
+
+        .product-card {
+            flex: 1 1 25%;
+
+            &:nth-child(4n) {
+                flex-basis: 100%;
+            }
+        }
+    }
+
+    &__load-more {
+        margin-top: abstracts.$space-m;
+    }
+}

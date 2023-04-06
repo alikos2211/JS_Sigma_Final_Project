@@ -1,0 +1,46 @@
+@use '../abstracts';
+
+.block-explore {
+    display: flex;
+    flex-direction: row;
+    gap: abstracts.$space-ml;
+
+    padding: {
+        top: 0 !important;
+        bottom: 0 !important;
+    }
+
+    background: {
+        image: url('../../images/bg-explore.png');
+        color: abstracts.$color-neutral-light;
+        repeat: repeat;
+        size: 100%;
+    }
+
+    main {
+        flex: 1 1 70%;
+
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+        justify-content: center;
+        gap: abstracts.$space-s;
+
+        margin: abstracts.$space-ml 0;
+    }
+
+    aside {
+        flex: 2 1 100%;
+
+        .explore__image {
+            height: 100%;
+            width: auto;
+
+            background: {
+                // color: abstracts.$color-neutral-light; // this was used when picture was not transparent
+            }
+            background-blend-mode: multiply;
+        }
+    }
+}

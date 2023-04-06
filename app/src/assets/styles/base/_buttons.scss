@@ -1,0 +1,66 @@
+@use '../abstracts';
+
+button,
+input[type=button] {
+
+}
+
+.btn {
+    padding: abstracts.$space-s abstracts.$space-xs;
+    font-family: abstracts.$font-family-main;
+    font-weight: abstracts.$font-weight-bold;
+    font-size: abstracts.$font-size-p;
+
+    border-radius: 16px;
+    border: none;
+
+    &--dark {
+        background-color: abstracts.$color-primary;
+        
+        color: abstracts.$color-neutral-light;
+    }
+
+    &--accent {
+        background-color: abstracts.$color-accent-alt;
+
+        color: abstracts.$color-primary;
+    }
+
+    &--neutral {
+        background-color: abstracts.$color-neutral-light;
+        border: 1px solid abstracts.$color-primary;
+
+        color: abstracts.$color-primary;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.social {
+    $size: 64px;
+    width: $size;
+    height: $size;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    img {
+        display: block;
+        height: 40%;
+        width: auto;
+    }
+
+    border: {
+        width: 0;
+        radius: 50%;
+    }
+
+    background: {
+        color: abstracts.$color-accent-light;
+    }
+}

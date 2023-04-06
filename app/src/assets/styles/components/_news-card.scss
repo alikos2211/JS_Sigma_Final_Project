@@ -1,0 +1,96 @@
+@use '../abstracts';
+
+.news-card {
+    position: relative;
+    height: 640px;
+
+    .user-icon {
+        color: abstracts.$color-accent-alt;
+    }
+
+    &__date {
+        position: absolute;
+        top: abstracts.$space-s;
+        left: abstracts.$space-s;
+        text-align: center;
+        vertical-align: middle;
+
+
+        width: 4.5em;
+        height: 4.5em;
+        line-height: 1em;
+
+        background-color: abstracts.$color-bg;
+
+        padding: abstracts.$space-s;
+        border: {
+            width: 0;
+            radius: 50%;
+        }
+
+        font-weight: bold;
+    }
+
+    &__user {
+        font-weight: normal;
+        font-size: abstracts.$font-size-p;
+    }
+
+    &__title {
+        font-size: abstracts.$font-size-h6;
+        margin-top: abstracts.$space-xxs;
+    }
+
+    &__image {
+        position: relative;
+        height: 80%;
+        width: 100%;
+
+        .img {
+            position: relative;
+            z-index: -1;
+            height: 100%;
+        }
+
+        border: {
+            width: 0;
+            radius: abstracts.$border-radius-default;
+        }
+
+        overflow: hidden;
+    }
+
+    &__button {
+        margin-top: abstracts.$space-s;
+    }
+
+    &__text {
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        margin-bottom: 0;
+
+        z-index: 1;
+
+        height: fit-content;
+        width: 90%;
+        
+        margin: (-1 * 256px) auto;
+
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: center;
+
+        border: {
+            width: 0;
+            radius: abstracts.$border-radius-default;
+        }
+
+        background-color: abstracts.$color-bg;
+        padding: abstracts.$space-m;
+        box-shadow: 0px 8px 36px 4px rgba(abstracts.$color-neutral-dark, 0.5);
+    }
+}

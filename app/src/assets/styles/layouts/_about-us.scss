@@ -1,0 +1,44 @@
+@use '../abstracts';
+@use '../base' as *;
+
+.block-about-us {
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include mq('medium') {
+        flex-wrap: wrap;
+    }
+
+    background: {
+        color: abstracts.$color-neutral-light;
+    }
+
+    &__subtitle {
+        margin: -1 * abstracts.$space-m 0;
+    }
+
+    main {
+        flex: 1 1 auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        gap: abstracts.$space-m;
+    }
+
+    aside {
+        flex: 1 1 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

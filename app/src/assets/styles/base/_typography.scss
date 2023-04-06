@@ -1,0 +1,75 @@
+@use '../abstracts';
+
+h1 {
+    font-family: abstracts.$font-family-headers;
+    font-size: abstracts.$font-size-h1;
+    font-weight: abstracts.$font-weight-extrabold;
+}
+
+h2 {
+    font-family: abstracts.$font-family-headers;
+    font-size: abstracts.$font-size-h2;
+    font-weight: abstracts.$font-weight-extrabold;
+}
+
+h3 {
+    font-family: abstracts.$font-family-headers;
+    font-size: abstracts.$font-size-h3;
+    font-weight: abstracts.$font-weight-extrabold;
+}
+
+h4 {
+    font-family: abstracts.$font-family-headers;
+    font-size: abstracts.$font-size-h4;
+    font-weight: abstracts.$font-weight-extrabold;
+}
+
+h5 {
+    font-family: abstracts.$font-family-headers;
+    font-size: abstracts.$font-size-h5;
+    font-weight: abstracts.$font-weight-extrabold;
+}
+
+h6 {
+    font-family: abstracts.$font-family-headers;
+    font-size: abstracts.$font-size-h6;
+    font-weight: abstracts.$font-weight-extrabold;
+}
+
+p {
+    font-family: abstracts.$font-family-main;
+    font-size: abstracts.$font-size-p;
+    font-weight: abstracts.$font-weight-default;
+}
+
+a {
+    font-family: abstracts.$font-family-headers;
+    font-size: abstracts.$font-size-p;
+    font-weight: abstracts.$font-weight-default;
+}
+
+blockquote {
+    font-family: abstracts.$font-family-main;
+    font-size: abstracts.$font-size-quote;
+    font-weight: abstracts.$font-weight-bold;
+}
+
+b,
+strong {
+    font-weight: abstracts.$font-weight-bold;
+}
+
+i {
+    font-style: italic;
+    color: abstracts.$color-neutral-dark;
+}
+
+.subtitle {
+    font-size: abstracts.$font-size-subtitle;
+    font-family: abstracts.$font-family-subtitle;
+    font-weight: abstracts.$font-weight-default;
+
+    &--italic {
+        font-style: italic;
+    }
+}

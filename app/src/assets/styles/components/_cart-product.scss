@@ -1,0 +1,94 @@
+@use '../abstracts';
+
+.cart-product {
+    width: 100%;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: flex-start;
+    gap: abstracts.$space-m;
+
+    padding: abstracts.$space-s;
+
+    border: {
+        width: 0;
+        radius: abstracts.$border-radius-smaller;
+    }
+    background-color: abstracts.$color-accent-light;
+    box-shadow: 0px 4px 12px 0px rgba(abstracts.$color-neutral-dark, 0.2);
+
+    &__image {
+        height: 100%;
+        box-shadow: 0px 4px 12px 0px rgba(abstracts.$color-neutral-dark, 0.2);
+        border: {
+            width: 0;
+            radius: abstracts.$border-radius-smaller;
+        }
+    }
+
+    &__details {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: stretch;
+    }
+
+    &__final-price {
+        font-style: italic;
+        color: abstracts.$color-accent;
+
+        margin-left: auto;
+        width: 6rem;
+    }
+
+    &__discount {
+        color: abstracts.$color-neutral;
+        font-size: abstracts.$font-size-p;
+        width: 6rem;
+    }
+
+    &__delete {
+        color: red;
+        cursor: pointer;
+    }
+
+    &__count-manip {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: stretch;
+        gap: abstracts.$space-xxs;
+    }
+
+    &__plus,
+    &__minus {
+        $size: 16px;
+        width: $size;
+        height: $size;
+
+        background-color: abstracts.$color-bg;
+        padding: abstracts.$space-xxs;
+
+        border: {
+            width: 0;
+            radius: 25%;
+        }
+
+        cursor: pointer;
+    }
+
+    &__plus {
+        color: green;
+    }
+
+    &__minus {
+        color: red;
+    }
+}

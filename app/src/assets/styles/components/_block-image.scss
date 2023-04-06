@@ -1,0 +1,14 @@
+.block-image {
+    padding: 0;
+    
+    background: {
+        repeat: no-repeat;
+        size: cover;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        visibility: hidden;
+    }
+}
